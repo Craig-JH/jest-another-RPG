@@ -57,3 +57,7 @@ test('gets a description of the enemy', () => {
   expect(enemy.getDescription()).toEqual(expect.stringContaining('goblin'));
   expect(enemy.getDescription()).toEqual(expect.stringContaining('sword'));
 });
+
+Enemy.prototype.getDescription = function() {
+  return `A ${this.name} holding a ${this.weapon} has appeared!`;
+};
